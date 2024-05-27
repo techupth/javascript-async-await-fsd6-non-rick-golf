@@ -1,6 +1,6 @@
 // Exercise #5
 let getJohnProfile = () => {
-  return new Promise(function (reject) {
+  return new Promise(function (_, reject) {
     setTimeout(
       () =>
         reject({
@@ -13,7 +13,10 @@ let getJohnProfile = () => {
 };
 
 const getProfile = async() => {
-    const errorMessage = await getJohnProfile()
-    console.log(errorMessage)
+    try {
+      const getData = await getJohnProfile()
+    } catch (error) {
+      console.log(error)
+    }
 }
 getProfile();

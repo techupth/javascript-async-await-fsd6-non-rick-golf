@@ -11,9 +11,11 @@ let getJohnProfile = () => {
     );
   });
 };
-
-let errorData = (data) => {
-  console.log(data);
+let getData = (data) => {
+  console.log(data)
+}
+let errorData = (err) => {
+  console.log(err);
 }
 
-getJohnProfile().catch(errorData)
+getJohnProfile().then(getData).catch(errorData)
