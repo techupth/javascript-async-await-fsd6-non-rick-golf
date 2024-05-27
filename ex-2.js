@@ -12,4 +12,8 @@ let getJohnProfile = () => {
   });
 };
 
-// Start coding here
+let errorData = (data) => {
+  console.log(data);
+}
+
+getJohnProfile().catch(errorData)
