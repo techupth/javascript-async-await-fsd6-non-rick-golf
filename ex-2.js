@@ -11,5 +11,11 @@ let getJohnProfile = () => {
     );
   });
 };
+let getData = (data) => {
+  console.log(data)
+}
+let errorData = (err) => {
+  console.log(err);
+}
 
-// Start coding here
+getJohnProfile().then(getData).catch(errorData)
